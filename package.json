@@ -1,5 +1,5 @@
 {
-  "name": "mp3youtube",
+  "name": "getmp3-api",
   "version": "0.1.0",
   "description": "Download YouTube videos' audio as mp3 files.",
   "main": "server.js",
@@ -20,8 +20,10 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^8.1.0",
+    "debug": "^4.3.2",
     "dotenv": "^10.0.0",
     "fastify": "^3.20.2",
+    "ffmpeg-static": "^4.4.0",
     "link-module-alias": "^1.2.0",
     "per-env": "^1.0.2",
     "pino-pretty": "^5.1.3",

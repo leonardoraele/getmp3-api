@@ -6,7 +6,7 @@
   "scripts": {
     "start": "per-env",
     "start:production": "node . | pino-pretty -c -t",
-    "start:development": "node-dev . | pino-pretty -c -t",
+    "start:development": "node-dev --inspect=${NODE_INSPECT_HOST:-127.0.0.1} . | pino-pretty -c -t",
     "test": "echo \"tests not implemented yet\" ; exit 1",
     "postinstall": "link-module-alias"
   },

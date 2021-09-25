@@ -4,9 +4,10 @@
   "description": "Download YouTube videos' audio as mp3 files.",
   "main": "server.js",
   "scripts": {
-    "start": "per-env",
-    "start:production": "node . | pino-pretty -c -t",
-    "start:development": "node-dev --inspect=${NODE_INSPECT_HOST:-127.0.0.1} . | pino-pretty -c -t",
+    "start": "npm run serve",
+    "serve": "per-env",
+    "serve:production": "node . | pino-pretty -c -t",
+    "serve:development": "node-dev --inspect=${NODE_INSPECT_HOST:-127.0.0.1} . | pino-pretty -c -t",
     "test": "echo \"tests not implemented yet\" ; exit 1",
     "postinstall": "link-module-alias"
   },
@@ -17,7 +18,7 @@
     "downloader"
   ],
   "author": "Leonardo Raele <leonardoraele@gmail.com>",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "commander": "^8.1.0",
     "debug": "^4.3.2",

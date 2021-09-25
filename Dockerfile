@@ -2,17 +2,21 @@ FROM node:16-alpine AS production
 
 WORKDIR /app
 
-RUN npm install -g npm@7
-
 COPY . .
 
 ENV NODE_ENV=production
 RUN npm ci
 
+COPY --from=gcr.io/leonardoraele/getmp3-ui:latest /dist /frontend
+
+ENV FRONTEND_PATH=/frontend
+
 USER node
 
-ENTRYPOINT ["npm"]
+ENTRYPOINT ["npm run"]
 
 CMD ["start"]
 
 FROM production AS development
+
+ENV NODE_ENV=development

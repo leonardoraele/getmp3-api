@@ -31,6 +31,7 @@
     "pino-pretty": "^5.1.3",
     "prism-media": "^1.3.2",
     "require-all": "^3.0.0",
+    "soundcloud-downloader": "^1.0.0",
     "streaming-cache": "^0.5.5",
     "throw2": "^1.0.1",
     "ytdl-core": "^4.9.1"

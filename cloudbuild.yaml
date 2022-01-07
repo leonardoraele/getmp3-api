@@ -1,5 +1,5 @@
 steps:
 - name: gcr.io/cloud-builders/docker
-  args: ['build', '--target', 'production', '--build-arg', 'frontend_image=gcr.io/$PROJECT_ID/getmp3-ui:latest', '-t', 'gcr.io/$PROJECT_ID/getmp3-api:$TAG_NAME', '.']
+  args: ['build', '--target', 'production', '--build-arg', 'frontend_image=gcr.io/$PROJECT_ID/getmp3-ui:latest', '-t', 'gcr.io/$PROJECT_ID/getmp3-api:latest', '-t', 'gcr.io/$PROJECT_ID/getmp3-api:$TAG_NAME', '.']
 images:
 - 'gcr.io/$PROJECT_ID/getmp3-api:$TAG_NAME'
